@@ -1,5 +1,6 @@
 using MMR.Randomizer.Attributes;
 using MMR.Randomizer.Attributes.Entrance;
+using MMR.Randomizer.Attributes.Archipelago;
 using MMR.Randomizer.Models;
 using MMR.Randomizer.Models.Settings;
 
@@ -14,6 +15,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to assume Deku form.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x78), ItemPool(ItemCategory.Masks, LocationCategory.StartingItems, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskDeku,
 
         // items
@@ -25,6 +27,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Use it to shoot arrows.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x02223000 + 0xAA, ChestAttribute.AppearanceType.AppearsClear)]
         [GetItemIndex(0x22), ItemPool(ItemCategory.MainInventory, LocationCategory.BossFights, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemBow,
 
         [StartingItem(0xC5CE26, 0x02)]
@@ -33,6 +36,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Arm your bow with arrows that burst into flame.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x02336000 + 0xCA, ChestAttribute.AppearanceType.AppearsClear)]
         [GetItemIndex(0x25), ItemPool(ItemCategory.MainInventory, LocationCategory.BossFights, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemFireArrow,
 
         [StartingItem(0xC5CE27, 0x03)]
@@ -41,6 +45,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Arm your bow with arrows that freeze.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x0292F000 + 0x11E, ChestAttribute.AppearanceType.AppearsClear)]
         [GetItemIndex(0x26), ItemPool(ItemCategory.MainInventory, LocationCategory.BossFights, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemIceArrow,
 
         [StartingItem(0xC5CE28, 0x04)]
@@ -49,6 +54,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Arm your bow with arrows infused with sacred light.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x0212B000 + 0xB2, ChestAttribute.AppearanceType.AppearsSwitch, 0x02192000 + 0x8E)]
         [GetItemIndex(0x27), ItemPool(ItemCategory.MainInventory, LocationCategory.BossFights, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemLightArrow,
 
         [Progressive]
@@ -61,6 +67,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This can hold up to a maximum of 20 bombs.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x1B), ItemPool(ItemCategory.MainInventory, LocationCategory.Purchases, ClassicCategory.ShopItems)]
+        [ArchipelagoItem]
         ItemBombBag,
 
         [Repeatable, Temporary]
@@ -70,6 +77,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Plant it in soft soil.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x11E), ItemPool(ItemCategory.MainInventory, LocationCategory.Purchases, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemMagicBean,
 
         [Repeatable]
@@ -80,6 +88,7 @@ namespace MMR.Randomizer.GameObjects
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [HackContent(nameof(Resources.mods.fix_keg_check))]
         [GetItemIndex(0x123), ItemPool(ItemCategory.MainInventory, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemPowderKeg,
 
         [StartingItem(0xC5CE31, 0x0D)]
@@ -88,6 +97,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Use it to snap pictographs.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x43), ItemPool(ItemCategory.MainInventory, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemPictobox,
 
         [StartingItem(0xC5CE32, 0x0E)]
@@ -96,6 +106,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Uses magic to see what the naked eye cannot.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x02EB8000 + 0x9A, ChestAttribute.AppearanceType.Normal)]
         [GetItemIndex(0x42), ItemPool(ItemCategory.MainInventory, LocationCategory.Chests, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemLens,
 
         [StartingItem(0xC5CE33, 0x0F)]
@@ -104,6 +115,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Use it to grapple objects.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x0238B000 + 0x14A, ChestAttribute.AppearanceType.Normal)]
         [GetItemIndex(0x41), ItemPool(ItemCategory.MainInventory, LocationCategory.Chests, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemHookshot,
 
         [Progressive]
@@ -150,6 +162,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("The most powerful sword has black roses etched in its blade.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x130), ItemPool(ItemCategory.MainInventory, LocationCategory.NpcRewards, ClassicCategory.GreatFairyRewards)]
+        [ArchipelagoItem]
         ItemFairySword,
 
         [StartingItemId(0x11)]
@@ -213,6 +226,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Allows you to keep track of people's schedules.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x50), ItemPool(ItemCategory.MainInventory, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         ItemNotebook,
 
         //upgrades
@@ -245,6 +259,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("It can reflect certain rays of light.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x029FE000 + 0x1AA, ChestAttribute.AppearanceType.AppearsSwitch)]
         [GetItemIndex(0x33), ItemPool(ItemCategory.MainInventory, LocationCategory.Chests, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         UpgradeMirrorShield,
 
         [RupeeRepeatable]
@@ -678,6 +693,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("You can look into mailboxes when you wear this.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x84), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskPostmanHat,
 
         [Purchaseable, Visible]
@@ -688,6 +704,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("When you wear it you don't get sleepy.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x7E), ItemPool(ItemCategory.Masks, LocationCategory.Purchases, ClassicCategory.ShopItems)]
+        [ArchipelagoItem]
         MaskAllNight,
 
         [StartingItem(0xC5CE3E, 0x47)]
@@ -696,6 +713,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it and detonate it...")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x8D), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskBlast,
 
         [StartingItem(0xC5CE3F, 0x45)]
@@ -704,6 +722,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Become as plain as stone so you can blend into your surroundings.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x8B), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskStone,
 
         [StartingItem(0xC5CE40, 0x40)]
@@ -712,6 +731,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("The mask's hair will shimmer when you're close to a Stray Fairy.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x131), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.GreatFairyRewards)]
+        [ArchipelagoItem]
         MaskGreatFairy,
 
         [StartingItem(0xC5CE42, 0x3A)]
@@ -721,6 +741,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("The mask of the ghost fox, Keaton.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x80), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskKeaton,
 
         [StartingItem(0xC5CE43, 0x46)]
@@ -729,6 +750,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it so young animals will mistake you for their leader.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x8C), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskBremen,
 
         [StartingItem(0xC5CE44, 0x39)]
@@ -737,6 +759,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to be filled with the speed and hearing of the wild.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x7F), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskBunnyHood,
 
         [StartingItem(0xC5CE45, 0x42)]
@@ -745,6 +768,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("When you wear it, you can call the Frog Choir members together.", isMultiple: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x88), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskDonGero,
 
         [RupeeRepeatable]
@@ -754,6 +778,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to heighten your sense of smell.")]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x8E), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskScents,
 
         [StartingItem(0xC5CE48, 0x3C)]
@@ -763,6 +788,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to show you're a member of the Milk Bar, Latte.", isMultiple: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x82), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskRomani,
 
         [StartingItem(0xC5CE49, 0x3D)]
@@ -771,6 +797,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("People related to Gorman will react to this.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x83), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskCircusLeader,
 
         [StartingItem(0xC5CE4A, 0x37)]
@@ -779,6 +806,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to inquire about Kafei's whereabouts.", isMultiple: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x8F), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskKafei,
 
         [StartingItem(0xC5CE4B, 0x3F)]
@@ -787,6 +815,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("When you wear it, you can soften people's hearts.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x85), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskCouple,
 
         [StartingItem(0xC5CE4C, 0x36)]
@@ -795,6 +824,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to read the thoughts of Gossip Stones and animals.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x8A), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskTruth,
 
         [StartingItem(0xC5CE4E, 0x43)]
@@ -803,6 +833,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear this to perform a mysterious dance.", isMultiple: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x89), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskKamaro,
 
         [Visible]
@@ -812,6 +843,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Even a real Gibdo will mistake you for its own kind.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x87), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskGibdo,
 
         [RupeeRepeatable]
@@ -821,6 +853,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This mask can summon the hidden Garo ninjas.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x81), ItemPool(ItemCategory.Masks, LocationCategory.Minigames, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskGaro,
 
         [StartingItem(0xC5CE51, 0x44)]
@@ -829,6 +862,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to pose as Captain Keeta.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x0280D000 + 0x392, ChestAttribute.AppearanceType.Normal, 0x0280D000 + 0x6FA)]
         [GetItemIndex(0x7C), ItemPool(ItemCategory.Masks, LocationCategory.BossFights, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskCaptainHat,
 
         [StartingItem(0xC5CE52, 0x49)]
@@ -837,6 +871,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("If you wear it in a certain room, you'll grow into a giant.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold), Chest(0x020F1000 + 0x1C2, ChestAttribute.AppearanceType.AppearsSwitch, 0x02164000 + 0x19E)]
         [GetItemIndex(0x7D), ItemPool(ItemCategory.Masks, LocationCategory.Chests, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskGiant,
 
         [Visible]
@@ -846,6 +881,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to assume Goron form.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x79), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskGoron,
 
         [Visible]
@@ -855,6 +891,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("Wear it to assume Zora form.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x7A), ItemPool(ItemCategory.Masks, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         MaskZora,
 
         //song
@@ -881,6 +918,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This melody will soothe restless spirits.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x124), ItemPool(ItemCategory.Songs, LocationCategory.StartingItems, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         SongHealing,
 
         [StartingItem(0xC5CE72, 0x80)]
@@ -889,6 +927,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This melody sends you to a stone bird statue in an instant.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x70), ItemPool(ItemCategory.SongOfSoaring, LocationCategory.NpcRewards, ClassicCategory.SongOfSoaring)]
+        [ArchipelagoItem]
         SongSoaring,
 
         [RupeeRepeatable]
@@ -898,6 +937,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This melody calls your horse, Epona.", isMultiple: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x71), ItemPool(ItemCategory.Songs, LocationCategory.Minigames, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         SongEpona,
 
         [StartingItem(0xC5CE71, 0x01)]
@@ -906,6 +946,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This melody is the turbulent tune that blows curses away.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x72), ItemPool(ItemCategory.Songs, LocationCategory.BossFights, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         SongStorms,
 
         [StartingItem(0xC5CE73, 0x40)]
@@ -914,6 +955,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This melody awakens those who have fallen into a deep sleep.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x73), ItemPool(ItemCategory.Songs, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         SongSonata,
 
         [StartingItem(0xC5CE73, 0x80)]
@@ -922,6 +964,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This melody blankets listeners in calm while making eyelids grow heavy.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x74), ItemPool(ItemCategory.Songs, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         SongLullaby,
 
         [StartingItem(0xC5CE72, 0x01)]
@@ -930,6 +973,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("It's the melody taught by the Zora children that invigorates singing voices.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x75), ItemPool(ItemCategory.Songs, LocationCategory.NpcRewards, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         SongNewWaveBossaNova,
 
         [StartingItem(0xC5CE72, 0x02)]
@@ -938,6 +982,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("It's a mystical song that allows you to shed a shell shaped in your current image.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x1CB), ItemPool(ItemCategory.Songs, LocationCategory.BossFights, ClassicCategory.BaseItemPool)] // 0x76 is a special value used for ice traps in chests
+        [ArchipelagoItem]
         SongElegy,
 
         [Visible]
@@ -947,6 +992,7 @@ namespace MMR.Randomizer.GameObjects
         [ShopText("This melody will call the giants at the right moment.", isDefinite: true)]
         [ChestType(ChestTypeAttribute.ChestType.LargeGold)]
         [GetItemIndex(0x77), ItemPool(ItemCategory.Songs, LocationCategory.BossFights, ClassicCategory.BaseItemPool)]
+        [ArchipelagoItem]
         SongOath,
 
         //areas/other
