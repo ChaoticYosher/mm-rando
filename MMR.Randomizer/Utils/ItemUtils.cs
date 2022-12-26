@@ -123,7 +123,7 @@ namespace MMR.Randomizer.Utils
         private static List<Item> _allLocations;
         public static IEnumerable<Item> AllLocations()
         {
-            return _allLocations ?? (_allLocations = Enum.GetValues(typeof(Item)).Cast<Item>().Where(item => item.HasAttribute<GetItemIndexAttribute>() || item.HasAttribute<GetBottleItemIndicesAttribute>()).ToList());
+            return _allLocations ?? (_allLocations = Enum.GetValues(typeof(Item)).Cast<Item>().Where(item => item != Item.RecoveryHeart && (item.HasAttribute<GetItemIndexAttribute>() || item.HasAttribute<GetBottleItemIndicesAttribute>())).ToList());
         }
 
         private static List<Item> _allEntrances;
